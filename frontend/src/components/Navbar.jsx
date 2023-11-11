@@ -42,13 +42,13 @@ const Navbar = () => {
       justify="space-between"
       wrap="wrap"
       padding="1rem"
-      bg="teal.500"
+      bgGradient="linear(to-l, #7928CA, #FF0080)"
       color="white"
     >
       <Link to="/">
         <Flex align="center" mr={5} cursor="pointer">
           <Text fontSize="xl" fontWeight="bold">
-            My Website
+            Book Store
           </Text>
         </Flex>
       </Link>
@@ -64,11 +64,11 @@ const Navbar = () => {
           </Button>
         ) : (
           <Button
-            colorScheme="blue"
+            colorScheme="red"
             onClick={() => {
               window.localStorage.removeItem("token");
               setIsLogin(false);
-              navigate("/")
+              navigate("/");
             }}
           >
             Logout
